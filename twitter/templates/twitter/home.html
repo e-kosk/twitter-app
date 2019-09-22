@@ -1,0 +1,23 @@
+{% extends "base/base.html" %}
+{% block content %}
+
+    <div class="new-tweet">
+        <form method="post">
+            {% csrf_token %}
+            {{ new_tweet_form }}
+            <input type="submit" value="opublikuj">
+        </form>
+    </div>
+    <hr>
+    {% for tweet in tweets %}
+        <div class="single-tweet">
+            <p class="tweet-owner-first-name">{{ tweet.owner.first_name }}</p>
+            <p class="tweet-owner-username">{{ tweet.owner.username }}</p>
+            <br>
+            <div class="tweet-content">
+                {{ tweet.content }}
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock %}

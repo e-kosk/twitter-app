@@ -1,0 +1,43 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if not user.is_authenticated %}
+    <meta http-equiv="refresh" content="0; url=login">
+    {% endif %}
+    <title>Twitter</title>
+    <link rel="stylesheet" href="{% static 'base/base.css' %}">
+    <link rel="stylesheet" href="{% static 'home/home.css' %}">
+    <link rel="stylesheet" href="{% static 'account/account.css' %}">
+</head>
+<body>
+
+<div id="top">
+    <img src="{% static 'base/logo.png' %}" class="logo">
+    <span class="top-twitter-name">Twitter</span>
+    <ul class="menu">
+        <li><a href="{% url 'home' %}">start</a></li>
+        <li><a href="{% url 'messages' %}">wiadomości</a></li>
+        <li><a href="{% url 'account' %}">konto</a></li>
+        <li><a href="{% url 'logout' %}">wyloguj</a> </li>
+    </ul>
+</div>
+
+<div id="content">
+    {% block content %}
+        <h2 class="content-error">Mamy problem :(</h2>
+        <p class="content-error-message">Wystąpił problem z wczytywaniem zawartości strony.
+        Spróbuj ponownie za kilka minut.</p>
+    {% endblock %}
+</div>
+
+<div id="footer">
+    <p class="footer-lear-more">
+        dowiedz się więcej o tym projekcie na <a href="https://github.com/e-kosk/twitter-app">github.com</a>
+    </p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+{% extends "base/base.html" %}
+{% block content %}
+
+    <div class="info">
+        <h1 class="username">{{ user.username }}</h1>
+        <table>
+        <tr>
+            <td>Imię:</td>
+            <td>{{ user.first_name }}</td>
+        </tr>
+        <tr>
+            <td>Nazwisko:</td>
+            <td>{{ user.last_name }}</td>
+        </tr>
+            <td>Email:</td>
+            <td>{{ user.email }}</td>
+        </tr>
+        </table>
+    </div>
+
+    <hr>
+
+    {% for tweet in user_tweets %}
+        <div class="single-tweet">
+            <p class="tweet-owner-first-name">{{ tweet.owner.first_name }}</p>
+            <p class="tweet-owner-username">{{ tweet.owner.username }}</p>
+            <br>
+            <div class="tweet-content">
+                {{ tweet.content }}
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock %}

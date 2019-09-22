@@ -1,0 +1,23 @@
+div.info {
+    margin: auto;
+    padding: 10px;
+    max-width: 1000px;
+    width: 80%;
+    border-radius: 20px;
+    background-color: white;
+}
+
+h1.username {
+    color: black;
+    font-weight: bolder;
+}
+
+p.first-name, p.last-name {
+
+}
+
+td {
+    width: 150px;
+    height: 80px;
+    /*border: 1px solid black*/
+}

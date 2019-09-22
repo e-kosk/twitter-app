@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+}
+
+
+/*------ top ------*/
+
+div#top {
+    margin: 0;
+    height: 80px;
+    background-color: #1ca5d4;
+    vertical-align: middle;
+    line-height: 80px;
+}
+
+img.logo {
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+    float: left;
+}
+
+span.top-twitter-name {
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    display: inline;
+    float: left;
+}
+
+ul.menu {
+    color: white;
+    text-transform: uppercase;
+    display: inline;
+    float: right;
+    margin: 0 30px 0 0;
+    padding: 0;
+}
+
+ul.menu li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*------ content ------*/
+
+div#content {
+    margin: 0;
+    background-color: #ededed;
+    height: 50em;
+    padding-top: 20px;
+}
+
+h2.content-error {
+    margin: 0;
+    color: black;
+
+}
+
+span.hello-screen {
+    text-transform: none;
+}
+
+
+/*------ footer ------*/
+
+div#footer {
+    margin: 0;
+    background-color: #183e5d;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+}
+
+p.footer-lear-more {
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+}
+
+p.footer-lear-more a {
+    color: white;
+    text-decoration: none;
+}
+
+p.footer-lear-more a:active {
+    color: #8d8d8d;
+    text-decoration: none;
+}
